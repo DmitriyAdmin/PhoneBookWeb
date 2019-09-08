@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Book</title>
+
+</head>
+<body>
+<h1><span th:text="${message}"></span></h1>
+
+<h1>Список контактов (<span th:text="${contactsCount}">0</span>):</h1>
+<br>
+<div id="contact-list">
+  <div th:each="contact : ${phoneBook}">
+    <a th:href = "'contacts/' + ${contact.id}" th:attr = "data-id=${contact.id}" th:text="${contact.firstName} +' '+ ${contact.lastName}"></a>
+
+  </div>
+</div>
+</body>
+</html>

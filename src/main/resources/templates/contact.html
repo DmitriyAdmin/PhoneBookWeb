@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Book</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div id="contact">
+  <h3> Имя : <span th:text="${phoneBook.firstName}">0</span></h3>
+  <h3> Фамилия : <span th:text="${phoneBook.lastName}">0</span></h3>
+  <h3> Номер телефона : <span th:text="${phoneBook.phoneNumber}">0</span></h3>
+  <h3> Заметка : <span th:text="${phoneBook.note}">0</span></h3>
+  <img th:attr = "src=${phoneBook.filename}">
+</div>
+</body>
+</html>

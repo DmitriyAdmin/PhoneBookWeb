@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Book</title>
+
+</head>
+<body>
+<h1 style="color:#00ff00"><span th:text="${message}"></span></h1>
+
+<div id="contact-form">
+  <form method="post" enctype="multipart/form-data">
+    <h2>Добавление контакта</h2>
+    <p><label>Имя:</label>
+    <input type="text" required name="firstName" value="">
+    </p>
+    <p><label>Фамилия</label>
+    <input type="text" required name="lastName" value="">
+    </p>
+    <p><label>Номер телефона</label>
+    <input type="number" required name="phoneNumber" value="">
+    </p>
+    <p><label>Изображение</label>
+    <input type="file" name="file" value="">
+    </p>
+    <p><label>Заметка</label>
+    <input type="text" name="note" value="">
+    </p>
+    <hr>
+    <p><button id="save-contact">Сохранить</button>
+    </p>
+  </form>
+</div>
+</body>
+</html>
